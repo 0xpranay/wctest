@@ -1,7 +1,6 @@
 import { WalletConnectConnector } from '@web3-react/walletconnect-connector'
 import {useWeb3React} from "@web3-react/core"
 import { useEffect } from 'react';
-import { ethers } from 'ethers';
 
 const RPC_URLS = {
     1: "https://mainnet.infura.io/v3/84842078b09946638c03157f83405213",
@@ -26,15 +25,15 @@ const walletconnect = new WalletConnectConnector({
 
 function CustomButton()
 {
-    useEffect(() => {
-        activate(walletconnect);
+    // useEffect(() => {
+    //     activate(walletconnect);
 
-        return () => {
-            disconnect();
-        }
-    }, [])
+    //     return () => {
+    //         disconnect();
+    //     }
+    // }, [])
 
-    const { active, account, library, connector, activate, deactivate, chainId } = useWeb3React();
+    const { active, account, library, activate, deactivate, chainId } = useWeb3React();
     
     async function connect(){
         try{
