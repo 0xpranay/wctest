@@ -1,6 +1,5 @@
 import { WalletConnectConnector } from '@web3-react/walletconnect-connector'
 import {useWeb3React} from "@web3-react/core"
-import { useEffect } from 'react';
 
 const RPC_URLS = {
     1: "https://mainnet.infura.io/v3/84842078b09946638c03157f83405213",
